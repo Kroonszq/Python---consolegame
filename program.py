@@ -15,16 +15,16 @@ ready = input("\033[91m\033[1mARE YOU READY TO START THIS ADVENTURE? (YES / NO):
 if ready != "YES":
     exit("Not ready? No problem come back next time")
 
-playsound("", "stop")                                        #stop song
-os.system("cls")                                             #clear cls
+playsound("", "stop")                                         #stop song
+os.system("cls")                                              #clear cls
 
 
 playing = True
 while playing:
     # - CHAPTER 2 THE FARM ------------------------------------------------------------------------------------------------
-    playsound("sound/naturesound.wav", "start")             #play song
-    print("\033[35m\033[1mCHAPTER 1 - the farm\033[0m")     #display chapter
-    printTxt(farmtxt)                                       #display chapter txt
+    playsound("sound/naturesound.wav", "start")               #play song
+    print("\033[35m\033[1mCHAPTER 1 - the farm\033[0m")       #display chapter
+    printTxt(farmtxt)                                         #display chapter txt
 
     # player desicion
     while True:

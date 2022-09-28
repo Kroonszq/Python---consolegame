@@ -4,7 +4,7 @@ def intro():
     introtxt = open("text/intro/intro.txt", "r", encoding="utf-8")
     #playsound("sound/intromusic.wav", "start")                             #play song
     print("\033[35m\033[1mCHAPTER 1 - introduction\033[0m")                 #display chapter
-    printTxt(introtxt)                                                      #display chapter txt
+    printTxt(introtxt, "import")                                            #display chapter txt
 
     # player desicion
     ready = input("\033[91m\033[1mARE YOU READY TO START THIS ADVENTURE? (YES / NO): \033[0m")

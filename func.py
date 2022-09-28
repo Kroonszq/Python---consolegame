@@ -6,14 +6,20 @@ mixer.init()
 texttype = input("Instant text or typing text(instant/typing): ")
 
 
-def printTxt(text:str) -> None:
+def printTxt(text:str, type:str = "") -> None:
     """
     Prints text in typing/instant way
     """
-    for x in text.read():
-        sys.stdout.write(x)
-        sys.stdout.flush()
-        time.sleep(0.01) if texttype == "typing" else None # sleeps for 5 seconds
+    if type == "import":  #import == .txt
+        for x in text.read():
+            sys.stdout.write(x)
+            sys.stdout.flush()
+            time.sleep(0.01) if texttype == "typing" else None # sleeps for 5 seconds
+    else:  # regular string
+        for x in text:
+            sys.stdout.write(x)
+            sys.stdout.flush()
+            time.sleep(0.01) if texttype == "typing" else None # sleeps for 5 seconds
     print("\n")
 
 def playsound(path:str, action:str) -> None:

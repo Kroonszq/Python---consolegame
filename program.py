@@ -34,7 +34,16 @@ while playing:
             chapter+=1
         else:
             continue
-        
+
+    #load in chapter2
+    if chapter == 2:
+        os.system("cls") #clear cls                         
+        chap2 = chapter2(items)
+        if chap2:
+            chapter+=1
+        else:
+            continue
+
     input("Hier komt chapter 3")
     
     break

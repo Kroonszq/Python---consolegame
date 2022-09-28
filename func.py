@@ -3,17 +3,23 @@ import time
 import sys
 import os
 mixer.init()
-
-
 texttype = input("Instant text or typing text(instant/typing): ")
-def printTxt(text):
+
+
+def printTxt(text:str) -> None:
+    """
+    Prints text in typing/instant way
+    """
     for x in text.read():
         sys.stdout.write(x)
         sys.stdout.flush()
         time.sleep(0.01) if texttype == "typing" else None # sleeps for 5 seconds
     print("\n")
 
-def playsound(path, action):
+def playsound(path:str, action:str) -> None:
+    """
+    Play or Stop music
+    """
     if action == "stop":
         mixer.music.fadeout(2500) # milisecond
     else:
@@ -21,7 +27,10 @@ def playsound(path, action):
         mixer.music.play(-1) # loop ifinity
         mixer.music.set_volume(0.1)
 
-def inputfield(txt, choises, inv):
+def inputfield(txt:str, choises:list, inv:list) -> None:
+    """
+    Create an input field based on the choises you give
+    """
     while True:
         print("What are you gonna do? ")
         opt = ord("A")
@@ -33,5 +42,4 @@ def inputfield(txt, choises, inv):
             print(inv)
         else:
             return playerInput
-
 

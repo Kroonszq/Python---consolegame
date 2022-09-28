@@ -16,4 +16,6 @@ while playing:
     if chapter == 1:                                        #load in chapter1
         chap1 = chapter1(items)
 
-    input("YESSSS")
+    print(items)
+
+    break

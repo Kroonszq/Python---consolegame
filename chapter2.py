@@ -3,20 +3,28 @@ from func import playsound, printTxt, os, inputfield
 import random
 
 def chapter2(items:list):
-    village = open("text/chapter2/chap2.txt", "r", encoding="utf-8")        #load chapter txt (primary)
+    villagetxt = open("text/chapter2/chap2.txt", "r", encoding="utf-8")     #load chapter txt (primary)
     inntxt = open("text/chapter2/inn.txt", "r", encoding="utf-8")           #load inn txt (optional)
+    neighbortxt = open("text/chapter2/neighbor.txt", "r", encoding="utf-8") #load neighbor txt (primary)
     #playsound("sound/naturesound.wav", "start")                            #play song
-    print("\033[35m\033[1mCHAPTER 2B - The village\033[0m")                 #display chapter
-    printTxt(village, "import")                                             #display chapter txt
+    print("\033[35m\033[1mCHAPTER 2 - The village\033[0m")                  #display chapter
+    printTxt(villagetxt, "import")                                          #display chapter txt
 
-    while True:
-        options = [
-            "Pickup the package from the neighbors",
-            "Get a drink at the local inn",
-        ]
+    completedInn = False     
+    while True:                 
+        options = ["Pickup the package from the neighbors"]
+        if not completedInn:
+            options.append("Get a drink at the local inn")
+
         decision = inputfield("Enter youre choice ", options, items)
+        os.system('cls')  
         if decision.upper().strip() == "A":
-            print("a")
+            printTxt(neighbortxt, "import")
+            printTxt("\033[93m\033[1macquired package\033[0m")
+
+            input("Press enter to continue")
+
+            return True
         elif decision.upper().strip() == "B":
             printTxt(inntxt, "import")
             options = [
@@ -42,10 +50,12 @@ def chapter2(items:list):
                         printTxt("\033[93m\033[1macquired knife\033[0m")
                         printTxt("You did wel boy, the men handed over his knife")
                         break
-                printTxt("Norr drinks the last little bit of water. Thank the man for the game and leave the inn")
+                printTxt("Norr drinks the last little bit of water. Thank the man for the game and leave the inn heading towards the ")
                 input("Press enter to continue")
+                completedInn = True
             else:
                 print("Drink and leave")
+                completedInn = True
         else:
             print("Invalid input")
 
@@ -78,6 +88,3 @@ def hangmanPuzzle():
         if guessstr == word:
             return f"You have won the words was {word}"
     return False
-
-
-chapter2([])

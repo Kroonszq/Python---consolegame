@@ -30,10 +30,11 @@ while playing:
     if chapter == 2:
         os.system("cls") #clear cls                         
         chap2 = chapter2(items)
-        if chap1:
+        if chap2:
             chapter+=1
         else:
             continue
-
+        
+    input("Hier komt chapter 3")
     
     break

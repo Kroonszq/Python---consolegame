@@ -1,5 +1,5 @@
-from chapter1 import chapter1
-from intro import intro
+from chapters.chapter1.chapter1 import chapter1
+from chapters.intro.intro import intro
 
 chapter = 0
 playing = True

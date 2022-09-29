@@ -119,4 +119,3 @@ def chapter4(items):
                 items.append("apple")
                 print("\033[93m\033[1macquired magic apple\033[0m")
             return True
-chapter4(["map"])

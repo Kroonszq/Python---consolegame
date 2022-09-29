@@ -57,7 +57,6 @@ while playing:
             chapter+=1
         else:
             continue
-    
     #load in chapter5
     if chapter == 5:
         os.system("cls") #clear cls                         

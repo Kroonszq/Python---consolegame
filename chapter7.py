@@ -3,7 +3,7 @@ from func import playsound, printTxt, os, inputfield
 def chapter7(items):
     banditxt = open("text/chapter7/chapter7.txt", "r", encoding="utf-8")         #load chapter txt (primary)         
     #playsound("sound/naturesound.wav", "start")                                 #play song
-    print("\033[35m\033[1mCHAPTER 6 - The bandits\033[0m")                #display chapter
+    print("\033[35m\033[1mCHAPTER 7 - The bandits\033[0m")                #display chapter
     printTxt(banditxt, "import")
 
     extraOption = ""
@@ -18,7 +18,7 @@ def chapter7(items):
     elif awnser == "B":
         print("2 mortage items get stolen")
     elif awnser == "C":
-        print()
+        print("test")
 
 
 

@@ -16,6 +16,7 @@ def chapter1(items:list) -> bool:
         decision1 = inputfield("Enter youre choice ", options, items)
         if decision1.upper().strip() == "A":
             print("Norr walks with the horses to the village")
+            break
         elif decision1.upper().strip() == "B":
             items.append("golden egg")
             print("\033[93m\033[1macquired golden egg\033[0m")

@@ -116,7 +116,12 @@ def chapter4(items):
             
             if "food" not in items:
                 print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
+<<<<<<< HEAD
                 items.apend("apple")
                 print("\033[93m\033[1macquired magic apple\033[0m")
             return True
 chapter4(["map"])
+=======
+                items.append("apple")
+            return True
+>>>>>>> b5178001cb85369605710632e3bfaf5a5fba5f53

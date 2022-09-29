@@ -46,7 +46,7 @@ def inputfield(txt:str, choises:list, inv:list) -> None:
                 opt+=1
         playerInput = input(f"\033[91m\033[1m{txt}\033[0m")
         if playerInput == "inventory":
-            print(inv)
+            print("\033[93m\033[1m",inv,"\033[0m")
         else:
             return playerInput
 

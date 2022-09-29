@@ -41,8 +41,9 @@ def inputfield(txt:str, choises:list, inv:list) -> None:
         print("What are you gonna do? ")
         opt = ord("A")
         for x in choises:
-            print(f"{chr(opt)} - {x}")
-            opt+=1
+            if len(x) > 0:
+                print(f"{chr(opt)} - {x}")
+                opt+=1
         playerInput = input(f"\033[91m\033[1m{txt}\033[0m")
         if playerInput == "inventory":
             print(inv)

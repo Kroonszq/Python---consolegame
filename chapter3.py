@@ -1,0 +1,46 @@
+from func import printTxt
+
+
+from func import playsound, printTxt, os, inputfield
+
+def chapter3(items):
+    chapter3 = open("text/chapter3/chapter3.txt", "r", encoding="utf-8")
+    print("\033[35m\033[1mCHAPTER 3 - the wazy wizard\033[0m")
+    printTxt(chapter3,"import")
+
+
+    optionalquestion = ""
+    if "golden egg" in items:
+        optionalquestion = "Give the golden egg"
+
+
+    options = [
+        "Give your own food",
+        "optionalquestion",
+        "Give nothing"
+    ]
+    decision = inputfield("What is Norr going to do? ", options, [])
+    print(decision)
+
+    if decision == "A":
+        print("Norr decided  to give the beggar his own food. “Here  ”, said Norr,” it isn’t much but it is al I have at the moment.” The beggar reached for the food with shaking hands. At that moment Norr could see the eyes of the man, they were sparkling with intelligence. Moments later the man threw the rags of him, and revealed long expensive looking robes and a long grey beard. “Thank you for sharing your food so graciously young man,” said the wizard, ”I’d like to return the favour, so young man tell me what is it you are after? ”. Norr was confused for a minute, but eventually he found the clarity of mind to tell the wizard the situation and that he didn’t think he’d make it in time. “if that’s all then I know of a safe route through the dangerous magical forest” said the wizard and handed him a map and disappeared.")
+    elif decision == "B":
+        print("")
+    elif decision == "C":
+        print("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chapter3([])

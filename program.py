@@ -1,12 +1,15 @@
 from chapter1 import chapter1
 from chapter2 import chapter2
+from chapter3 import chapter3
+from chapter4 import chapter4
+from chapter5 import chapter5
 from intro import intro
 from func import os
-from chapter3 import chapter3
+
 
 chapter = 0
 playing = True
-items = []
+items = ["grain", "bread", "milk", "chickens"]
 
 while playing:
     #load in intro:
@@ -45,15 +48,23 @@ while playing:
         else:
             continue
 
+    #load in chapter4
+    if chapter == 4:
+        os.system("cls") #clear cls                         
+        chap4 = chapter4(items)
+        if chap4:
+            chapter+=1
+        else:
+            continue
     
-    # #load in chapter4
-    # if chapter == 4:
-    #     os.system("cls") #clear cls                         
-    #     chap4 = chapter4(items)
-    #     if chap4:
-    #         chapter+=1
-    #     else:
-    #         continue
+    #load in chapter5
+    if chapter == 5:
+        os.system("cls") #clear cls                         
+        chap5 = chapter5(items)
+        if chap5:
+            chapter+=1
+        else:
+            continue
     # input("Hier komt chapter 3")
     
     break

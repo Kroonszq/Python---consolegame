@@ -1,4 +1,3 @@
-from ast import While
 from func import playsound, printTxt, os, inputfield
 import random
 

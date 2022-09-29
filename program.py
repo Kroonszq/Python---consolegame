@@ -3,6 +3,7 @@ from chapter2 import chapter2
 from chapter3 import chapter3
 from chapter4 import chapter4
 from chapter5 import chapter5
+from chapter6 import chapter6
 from intro import intro
 from func import os
 
@@ -62,6 +63,14 @@ while playing:
         os.system("cls") #clear cls                         
         chap5 = chapter5(items)
         if chap5:
+            chapter+=1
+        else:
+            continue
+        #load in chapter5
+    if chapter == 6:
+        os.system("cls") #clear cls                         
+        chap6 = chapter6(items)
+        if chap6:
             chapter+=1
         else:
             continue

@@ -2,7 +2,7 @@ from func import playsound, printTxt, os, inputfield
 import random
 
 
-def chapter5(items:list):
+def chapter6(items:list):
     sleepingtxt = open("text/chapter6/chapter6.txt", "r", encoding="utf-8")         #load chapter txt (primary)         
     #playsound("sound/naturesound.wav", "start")                                 #play song
     print("\033[35m\033[1mCHAPTER 6 - The temple\033[0m")                #display chapter
@@ -52,5 +52,3 @@ def chapter5(items:list):
     input("Press enter to continue ")
     return True     
       
-
-chapter5([])

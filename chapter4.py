@@ -116,6 +116,5 @@ def chapter4(items):
             
             if "food" not in items:
                 print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
-                items.apend("apple")
+                items.append("apple")
             return True
-chapter4(["map"])

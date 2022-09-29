@@ -66,5 +66,23 @@ while playing:
         else:
             continue
     # input("Hier komt chapter 3")
+
+    if chapter == 6:
+        os.system("cls") #clear cls                         
+        chap6 = chapter5(items)
+        if chap6:
+            chapter+=1
+        else:
+            continue
     
+    if chapter == 7:
+        os.system("cls") #clear cls                         
+        chap7 = chapter5(items)
+        if chap7:
+            chapter+=1
+        else:
+            continue
+
+    
+
     break

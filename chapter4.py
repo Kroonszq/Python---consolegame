@@ -1,5 +1,3 @@
-from base64 import decode
-import re
 from func import printTxt
 from func import playsound, printTxt, os, inputfield
 
@@ -109,6 +107,8 @@ def chapter4(items):
 
                 if decision == "A":
                     print("It was a hard choice but he had to drop the milk to go faster. But he still wasn’t fast enough so he also had to leave the chickens to distract the spider. With the spider distracted Norr was able to flee without a problem.")
+                    items.remove("milk")
+                    items.remove("chickens")
                 elif decision == "B":
                     print("It was a hard choice but he had to drop his own food to distract the spider. He couldn’t afford to lose any the mortgage items. With the spider distracted Norr was able to flee without a problem.")
                 elif decision == "C":
@@ -117,5 +117,6 @@ def chapter4(items):
             if "food" not in items:
                 print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
                 items.apend("apple")
+                print("\033[93m\033[1macquired magic apple\033[0m")
             return True
 chapter4(["map"])

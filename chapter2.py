@@ -11,13 +11,17 @@ def chapter2(items:list):
     printTxt(villagetxt, "import")                                              #display chapter txt
 
     completedInn = False                                                       
-    while True:                 
+    while True:   
+
+
         options = ["Pickup the package from the neighbors"]
         if not completedInn:
             options.append("Get a drink at the local inn")
 
         decision = inputfield("Enter youre choice ", options, items)
         os.system('cls')  
+
+
         # OPTION - Pickup the package from the neighbors
         if decision.upper().strip() == "A": 
             items.append("package")                                        
@@ -25,6 +29,8 @@ def chapter2(items:list):
             printTxt("\033[93m\033[1macquired package\033[0m")                
             input("Press enter to continue")                                   
             return True
+
+
         # OPTION - "Get a drink at the local inn
         elif decision.upper().strip() == "B":
             printTxt(inntxt, "import")
@@ -33,7 +39,9 @@ def chapter2(items:list):
                 "Get yourslef a drink and leave",
             ]
             decision2 = inputfield("Enter youre choice ", options, items)
-            os.system('cls')                                                 
+            os.system('cls')       
+
+
             # OPTION - Play a game with the man
             if decision2 == "A":                                                
                 printTxt("Alright, the game we will play is hangman, i will chose a word and you have to guess it")
@@ -56,10 +64,14 @@ def chapter2(items:list):
                         break
                 printTxt("Norr drinks the last little bit of water. Thank the man for the game and leave the inn heading towards the ")
                 input("Press enter to continue")
+
+                
             # OPTION - Get yourslef a drink and leave
             else:
                 print("Drink and leave")
             completedInn = True
+
+
         else:
             print("Invalid input")
 

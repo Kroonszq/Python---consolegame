@@ -12,7 +12,7 @@ from func import os
 
 chapter = 0
 playing = True
-items = ["grain", "bread", "milk", "chickens"]
+items = ["grain", "bread", "milk", "chickens","food"]
 
 while playing:
     #load in intro:

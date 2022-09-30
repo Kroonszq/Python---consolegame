@@ -10,7 +10,8 @@ def chapter4(items):
     while True:
 
         if "map" in items:
-            items.remove("food")
+            if "food" in items:
+                items.remove("food")
             printTxt(chapter4route,"import")
 
             print("Norr saw a lightning struck tree.")
@@ -50,7 +51,7 @@ def chapter4(items):
                         decision = inputfield("Norr can  go left or right what does he choose? ", options, items)
                         print(decision)
                         if decision == "B":
-                            return True
+                            print("He finnaly reached the edge of the dark creepy forest")
                         else:
                             print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
                             failed = True
@@ -119,6 +120,8 @@ def chapter4(items):
             print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
             items.append("apple")
             print("\033[93m\033[1macquired magic apple\033[0m")
+            print()
+            input("press a button to contiue...")
         return True
 
 

@@ -25,6 +25,7 @@ def chapter3(items):
         if decision == "A":
             print("Norr decided  to give the beggar his own food. “Here  ”, said Norr,” it isn’t much but it is al I have at the moment.” The beggar reached for the food with shaking hands. At that moment Norr could see the eyes of the man, they were sparkling with intelligence. Moments later the man threw the rags of him, and revealed long expensive looking robes and a long grey beard. “Thank you for sharing your food so graciously young man,” said the wizard, ”I’d like to return the favour, so young man tell me what is it you are after? ”. Norr was confused for a minute, but eventually he found the clarity of mind to tell the wizard the situation and that he didn’t think he’d make it in time. “if that’s all then I know of a safe route through the dangerous magical forest” said the wizard and handed him a map and disappeared.")
             items.append("map")
+            items.remove("food")
             print("\033[93m\033[1macquired map\033[0m")
             
         elif decision == "B":

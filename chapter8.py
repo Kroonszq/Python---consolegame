@@ -1,7 +1,7 @@
 from func import printTxt
 from func import playsound, printTxt, os, inputfield
 
-def chapter4(items):
+def chapter8(items):
     print("\033[35m\033[1mCHAPTER 8 - the castle\033[0m")
     print("After many trials Norr finally reached the castle. Joy overflowed in his body. The only thing left to do was use the key and give the mortgage items and then he could go home. ")
 
@@ -44,3 +44,5 @@ def chapter4(items):
 
     else:
         print("Norr couldn’t even enter the castle because he didn’t have a key. No matter how he yelled they didn’t let him in. Norr and his parents got a lot of trouble for this and needed to pay the mortgage items and a huge fine. YOU FAILED")
+
+    input("Press enter to continue: ")

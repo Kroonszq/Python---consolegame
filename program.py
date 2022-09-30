@@ -5,6 +5,7 @@ from chapter4 import chapter4
 from chapter5 import chapter5
 from chapter6 import chapter6
 from chapter7 import chapter7
+from chapter8 import chapter8
 from intro import intro
 from func import os
 

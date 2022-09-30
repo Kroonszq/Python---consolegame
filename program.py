@@ -83,6 +83,12 @@ while playing:
         else:
             continue
 
-    
+    if chapter == 8:
+        os.system("cls") #clear cls                         
+        chap8 = chapter8(items)
+        if chap8:
+            chapter+=1
+        else:
+            continue
 
     break

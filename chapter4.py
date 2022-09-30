@@ -48,7 +48,7 @@ def chapter4(items):
                         ]
                         decision = inputfield("Norr can  go left or right what does he choose? ", options, items)
                         print(decision)
-                        if decision == "right":
+                        if decision == "B":
                             return True
                         else:
                             print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")

@@ -13,7 +13,7 @@ def chapter1(items:list) -> bool:
             "Go straight to the village",
             "Check your chickens",
         ]
-        decision1 = inputfield("Enter youre choice ", options, items)
+        decision1 = inputfield("Enter your choice ", options, items)
         if decision1.upper().strip() == "A":
             print("Norr walks with the horses to the village")
             break

@@ -28,15 +28,18 @@ def playsound(path:str, action:str) -> None:
     """
     if action == "stop":
         mixer.music.fadeout(2500) # milisecond
-    else:
+    elif action == "start":
         mixer.music.load(path)
         mixer.music.play(-1) # loop ifinity
         mixer.music.set_volume(0.1)
+    else:
+        print("Invalid")
 
-def inputfield(txt:str, choises:list, inv:list) -> None:
+def inputfield(txt:str, choises:list, inv:list = []) -> None:
     """
     Create an input field based on the choises you give
     """
+    global items
     while True:
         print("What are you gonna do? ")
         opt = ord("A")
@@ -46,7 +49,7 @@ def inputfield(txt:str, choises:list, inv:list) -> None:
                 opt+=1
         playerInput = input(f"\033[91m\033[1m{txt}\033[0m")
         if playerInput == "inventory":
-            print("\033[93m\033[1m",inv,"\033[0m")
+            print("\033[93m\033[1m",items,"\033[0m")
         else:
-            return playerInput
+            return playerInput.upper()
 

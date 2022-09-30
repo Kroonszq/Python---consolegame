@@ -49,5 +49,3 @@ def chapter8(items):
     else:
         print("Norr couldn’t even enter the castle because he didn’t have a key. No matter how he yelled they didn’t let him in. Norr and his parents got a lot of trouble for this and needed to pay the mortgage items and a huge fine. YOU FAILED")
         return False
-
-    input("Press enter to continue: ")

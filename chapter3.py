@@ -37,7 +37,8 @@ def chapter3(items):
         print("When you come across a large open field go strait over it")
         print("At the skull boulder turn left")
         print("when you see the mushroom forest turn right")
-        time.sleep(10)
+        print()
+        input("press enter to continue...")
         return True
     elif decision == "C":
         print("Norr felt sorry for the beggar but didn’t think he could miss anything. When he rode past, the beggar asked if Norr was going to the castle. Norr said he was but didn’t think he’d make it in time. The beggar said he could take a shortcut through the magical forest. Norr rode away and yelled thanks before the beggar could finish his sentence.")

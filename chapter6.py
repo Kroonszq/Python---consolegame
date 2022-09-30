@@ -1,6 +1,4 @@
 from func import playsound, printTxt, os, inputfield
-import random
-
 
 def chapter6(items:list):
     sleepingtxt = open("text/chapter6/chapter6.txt", "r", encoding="utf-8")         #load chapter txt (primary)         
@@ -49,6 +47,8 @@ def chapter6(items:list):
 
     printTxt("Mhhhm, after all you are worthy to pass i didnt expect that. Here take this you might need this.")
     print("\033[93m\033[1macquired key\033[0m")
+
+    items.append("key")
     input("Press enter to continue ")
     return True     
       

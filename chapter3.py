@@ -30,6 +30,7 @@ def chapter3(items):
         elif decision == "B":
             print("Norr decided  to give the beggar his golden egg. “Here  ”, said Norr,” maybe you can sell this in the next town and buy some food.” The beggar reached for the egg with shaking hands. At that moment Norr could see the eyes of the man, they were sparkling with intelligence. Moments later the man threw the rags of him, and revealed long expensive looking robes and a long grey beard. “Thank you for sharing your wealth so graciously young man,” said the wizard, ”I’d like to return the favour, so young man tell me what is it you are after? ”. Norr was confused for a minute, but eventually he found the clarity of mind to tell the wizard the situation and that he didn’t think he’d make it in time. “if that’s all then I know of a safe route through the dangerous magical forest” said the wizard and handed him a map and disappeared.")
             items.append("map")
+            items.remove("golden egg")
             print("\033[93m\033[1macquired map\033[0m")
 
         print("the map contains a set of instructions")

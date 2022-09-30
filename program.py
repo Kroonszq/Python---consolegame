@@ -10,7 +10,7 @@ from intro import intro
 from func import os
 
 
-chapter = 0
+chapter = 7
 playing = True
 items = ["grain", "bread", "milk", "chickens"]
 
@@ -89,7 +89,14 @@ while playing:
         chap8 = chapter8(items)
         if chap8:
             chapter+=1
+            break
         else:
-            continue
+            break
 
-    break
+
+if chapter >= 9:
+    print("CONGRATSTSSSSS YOU HAVE WON THE GAME")
+else:
+    print("Dipshit play better next time you are worthless.")
+
+input("Press enter to close the game")

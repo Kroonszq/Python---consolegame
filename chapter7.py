@@ -22,7 +22,7 @@ def chapter7(items):
         # OPTION A - Pass trough
         if awnser == "A":
             print("2 mortage items get stolen")
-            print(f"Bandits stole grain & bread")
+            print(f"\033[31m\033[1mlost bread & grain\033[0m")
 
             items.remove("bread")
             items.remove("grain")
@@ -48,3 +48,4 @@ def chapter7(items):
     input("Press enter to continue: ")
 
     return True
+

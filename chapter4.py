@@ -10,6 +10,7 @@ def chapter4(items):
     while True:
 
         if "map" in items:
+            items.remove("food")
             printTxt(chapter4route,"import")
 
             print("Norr saw a lightning struck tree.")
@@ -113,9 +114,11 @@ def chapter4(items):
                     print("It was a hard choice but he had to drop his own food to distract the spider. He couldn’t afford to lose any the mortgage items. With the spider distracted Norr was able to flee without a problem.")
                 elif decision == "C":
                     print("It was a hard choice but he had to drop the golden egg to go faster. While Norr lost the egg he was fast enough to escape the spider.")
-            
-            if "food" not in items:
-                print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
-                items.append("apple")
-                print("\033[93m\033[1macquired magic apple\033[0m")
-            return True
+              
+        if "food" not in items:
+            print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
+            items.append("apple")
+            print("\033[93m\033[1macquired magic apple\033[0m")
+        return True
+
+

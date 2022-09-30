@@ -12,15 +12,6 @@ def chapter8(items):
     if "golden egg" in items:
         optionalquestion = "Give the golden egg"
 
-
-    options = [
-        "Give your own food",
-        optionalquestion,
-        "Give nothing"
-    ]
-    decision = inputfield("What is Norr going to do? ", options, items)
-    print(decision)
-
     if "milk" in items:
         mortgageitems += 1
     if "chickens" in items:

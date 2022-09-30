@@ -10,7 +10,7 @@ from intro import intro
 from func import os
 
 
-chapter = 7
+chapter = 0
 playing = True
 items = ["grain", "bread", "milk", "chickens"]
 

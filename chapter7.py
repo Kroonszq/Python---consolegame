@@ -13,7 +13,7 @@ def chapter7(items):
 
     # extra option 2 - magic apple
     extraOption2 = ""
-    if "magic apple" in items:
+    if "apple" in items:
         extraOption2 = "Give magic apple"
 
     
@@ -35,12 +35,12 @@ def chapter7(items):
                     items.remove("golden egg")
                 else:
                     print("The magic apple drops from Norr his pocket and out of nowhere out of the magic apple spawns a giant tree and norr and his horse are liftid up")
-                    items.remve("magic apple")
+                    items.remove("apple")
                 break
             # OPTION C - golden magic apple
             elif awnser == "C":
                 print("The magic apple drops from Norr his pocket and out of nowhere out of the magic apple spawns a giant tree and norr and his horse are liftid up")
-                items.remove("magic apple")
+                items.remove("apple")
                 break
 
         print("Invalid input")

@@ -9,7 +9,6 @@ def chapter4(items):
     failed = False
     
     while True:
-
         if "map" in items:
             if "food" in items:
                 items.remove("food")
@@ -77,12 +76,10 @@ def chapter4(items):
             else:
                 failed = True
                 items.remove("map")
-                print("Really bad :(")
-
+                print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
             input("PRESS ENTER TO CONTINUE ... ")
 
-
-        else:
+        elif "map" not in items or failed == True:
             if failed == False:
                 printTxt(chapter4,"import")
             
@@ -94,40 +91,41 @@ def chapter4(items):
             if "food" in items:
                 optionalquestion = "Drop your own food"
 
-
-            options = [
-            "CHAAARGE!!!",
-            "Flee"
-            ]
-            decision = inputfield("How are you going to survive? ", options, items)
-            print(decision)
-
-            if decision == "A":
-                if "knife" in items:
-                    print("Norr charged the spider. With the knife he got from the old hunter in his village. He jumped and per chance the knife pierced an eye blood splattered everywhere. Norr ran to his cart and rode away never looking back.")
-                    
-                else:
-                    print("Norr charged the spider but without a weapon didn’t stand a chance the fangs of the spider pierced his skin and he lost conscious immediately. He never saw his family again.")
-                    return False
-            elif decision == "B":
-                print("He spurred on his horse to flee as fast as possible, but he wasn’t fast enough. ")
-
-                options = [
-                "drop mortgage items",
-                optionalquestion2,
-                optionalquestion
-                ]
-                decision = inputfield("You need to drop something? ", options, items)
+            
+            while True:
+                decision = inputfield("How are you going to survive? ", ["CHAAARGE!!!", "Flee"], items)
                 print(decision)
-
                 if decision == "A":
-                    print("It was a hard choice but he had to drop the milk to go faster. But he still wasn’t fast enough so he also had to leave the chickens to distract the spider. With the spider distracted Norr was able to flee without a problem.")
-                    items.remove("milk")
-                    items.remove("chickens")
+                    if "knife" in items:
+                        print("Norr charged the spider. With the knife he got from the old hunter in his village. He jumped and per chance the knife pierced an eye blood splattered everywhere. Norr ran to his cart and rode away never looking back.")
+                    else:
+                        exit("Norr charged the spider but without a weapon didn’t stand a chance the fangs of the spider pierced his skin and he lost conscious immediately. He never saw his family again.")   
+                
                 elif decision == "B":
-                    print("It was a hard choice but he had to drop his own food to distract the spider. He couldn’t afford to lose any the mortgage items. With the spider distracted Norr was able to flee without a problem.")
-                elif decision == "C":
-                    print("It was a hard choice but he had to drop the golden egg to go faster. While Norr lost the egg he was fast enough to escape the spider.")
+                    print("He spurred on his horse to flee as fast as possible, but he wasn’t fast enough. ")
+
+                    while True:
+                        decision = inputfield("You need to drop something? ", ["drop mortgage items", optionalquestion2, optionalquestion], items)
+                        print(decision)
+
+                        if decision == "A":
+                            print("It was a hard choice but he had to drop the milk to go faster. But he still wasn’t fast enough so he also had to leave the chickens to distract the spider. With the spider distracted Norr was able to flee without a problem.")
+                            items.remove("milk")
+                            items.remove("chickens")
+                            break
+                        elif decision == "B":
+                            print("It was a hard choice but he had to drop his own food to distract the spider. He couldn’t afford to lose any the mortgage items. With the spider distracted Norr was able to flee without a problem.")
+                            items.remove("golden egg")
+                            break
+                        elif decision == "C":
+                            print("It was a hard choice but he had to drop the golden egg to go faster. While Norr lost the egg he was fast enough to escape the spider.")
+                            items.remove("golden egg")
+                            break
+                        else:
+                            print("invalid input")
+                    break
+                else:
+                    print("invalid input")
               
         if "food" not in items:
             print("Norr still needed something to eat so he picked up an apple at the edge of the forest.")
@@ -137,5 +135,3 @@ def chapter4(items):
             input("press a button to contiue...")
         return True
 
-
-chapter4(["map"])

@@ -1,3 +1,4 @@
+from importlib.resources import path
 from func import printTxt
 from func import playsound, printTxt, os, inputfield
 
@@ -13,62 +14,74 @@ def chapter4(items):
             if "food" in items:
                 items.remove("food")
             printTxt(chapter4route,"import")
-
             print("Norr saw a lightning struck tree.")
 
-            options = [
-            "left",
-            "right"
-            ]
-            decision = inputfield("Is Norr going left or right? ", options, items)
-            print(decision)
-
-            if decision == "A":
-                print("The next landmark Norr needed to watch out for was a large open field.")
-                options = [
-                "left",
-                "right",
-                "strait"
-                ]
-                decision = inputfield("Norr has three options this time does het go left, right or strait thru the field? ", options, items)
-                print(decision)
-                
-                if decision == "C":
-                    print("He followed the road until he saw a large skull shaped boulder.")
-                    options = [
-                    "left",
-                    "right"
-                    ]
-                    decision = inputfield("Norr can  go left or right what does he choose? ", options, items)
-                    print(decision)
-
-                    if decision == "A":
-                        print("He next reached a poisonous looking giant mushroom patch.")
-                        options = [
-                        "left",
-                        "right"
-                        ]
-                        decision = inputfield("Norr can  go left or right what does he choose? ", options, items)
-                        print(decision)
-                        if decision == "B":
-                            print("He finnaly reached the edge of the dark creepy forest")
-                        else:
-                            print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
-                            failed = True
-                            items.remove("map")
-                    else:
-                        print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
-                        failed = True
-                        items.remove("map")
+            # path 1 
+            path1 = None
+            while True:
+                decision = inputfield("Is Norr going left or right? ", ["left", "right"], items)
+                if decision == "A": #GOOD
+                    path1 = True
+                    break
+                elif decision == "B": #WRONG
+                    path1 = False
+                    break
                 else:
-                    print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
-                    failed = True
-                    items.remove("map")
+                    print("invalid input")
+
+            #path 2
+            path2 = None
+            if path1:
+                while True:
+                    decision = inputfield("Norr has three options this time does het go left, right or strait thru the field? ", ["left", "right", "straight"], items)
+                    if decision == "C":
+                        path2 = True
+                        break
+                    elif decision == "A" or decision == "B":
+                        path2 = False
+                        break
+                    else:
+                        print("invalid input")
+
+            #path 3    
+            path3 = None
+            if path2:
+                while True:
+                    decision = inputfield("Norr can  go left or right what does he choose? ", ["left", "right"], items)
+                    if decision == "A": #GOOD     
+                        path3 = True 
+                        break
+                    elif decision == "B": #WRONG
+                        path3 = False
+                        break
+                    else:
+                        print("invalid input")
+
+            #path 4
+            path4 = None
+            if path3:
+                while True:
+                    decision = inputfield("Norr can  go left or right what does he choose? ", ["left", "right"], items)
+                    if decision == "B":
+                        path4 = True
+                        break
+                    elif decision == "A":
+                        path4 = False
+                        break
+                    else:
+                        print("invalid input")
+                
+            #check result
+            if path4: # CORRECT = A C A B
+                print("He finnaly reached the edge of the dark creepy forest")
             else:
-                print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
                 failed = True
                 items.remove("map")
-            
+                print("Really bad :(")
+
+            input("PRESS ENTER TO CONTINUE ... ")
+
+
         else:
             if failed == False:
                 printTxt(chapter4,"import")
@@ -125,3 +138,4 @@ def chapter4(items):
         return True
 
 
+chapter4(["map"])

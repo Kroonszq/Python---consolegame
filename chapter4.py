@@ -105,7 +105,7 @@ def chapter4(items):
                     print("He spurred on his horse to flee as fast as possible, but he wasn’t fast enough. ")
 
                     while True:
-                        decision = inputfield("You need to drop something? ", ["drop mortgage items", optionalquestion2, optionalquestion], items)
+                        decision = inputfield("You need to drop something? ", ["drop mortgage items", optionalquestion, optionalquestion2], items)
                         print(decision)
 
                         if decision == "A":

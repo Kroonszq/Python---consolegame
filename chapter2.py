@@ -17,8 +17,7 @@ def chapter2(items:list):
             extraOption1= "Get a drink at the local inn"
 
         decision = inputfield("Enter youre choice ", ["Pickup the package from the neighbors", extraOption1], items)
-        os.system('cls')  
-
+       
         # OPTION - Pickup the package from the neighbors
         if decision == "A": 
             items.append("package")                                        
@@ -29,12 +28,12 @@ def chapter2(items:list):
         # OPTION - "Get a drink at the local inn
         elif decision == "B":
             printTxt(inntxt, "import")
-            os.system('cls')       
 
             while True:
                 decision2 = inputfield("Enter youre choice ", ["Play a game with the man", "Get yourslef a drink and leave"], items)
                 # OPTION A - Play a game with the man
-                if decision2 == "A":                                                
+                if decision2 == "A":       
+                    os.system('cls')                                         
                     printTxt("Alright, the game we will play is hangman, i will chose a word and you have to guess it")
                     while True:
                         result = hangmanPuzzle()                                            

@@ -79,7 +79,7 @@ def chapter4(items):
                 print("It became even darker and then the sounds started at first Norr thought it was the wind rustling through the leaves then Norr started to assure himself it was the wind rustling through the leaves and that he wasn’t lost. He started seeing eyes everywhere. And then he saw the creature. A lot of eyes, big fangs and eight legs this was the biggest spider Norr had ever seen. Norr was extremely scared but needed to do something.")
             input("PRESS ENTER TO CONTINUE ... ")
 
-        elif "map" not in items or failed == True:
+        if "map" not in items or failed == True:
             if failed == False:
                 printTxt(chapter4,"import")
             
@@ -99,8 +99,18 @@ def chapter4(items):
                     if "knife" in items:
                         print("Norr charged the spider. With the knife he got from the old hunter in his village. He jumped and per chance the knife pierced an eye blood splattered everywhere. Norr ran to his cart and rode away never looking back.")
                     else:
-                        exit("Norr charged the spider but without a weapon didn’t stand a chance the fangs of the spider pierced his skin and he lost conscious immediately. He never saw his family again.")   
-                
+                        print("Norr charged the spider but without a weapon didn’t stand a chance the fangs of the spider pierced his skin and he lost conscious immediately. He never saw his family again.")
+
+                        print("\nYOU DIED\n")
+
+                        input("press a button to continue...")
+
+                        exit()
+
+                    
+                    input("press a button to continue...")
+
+                    return True
                 elif decision == "B":
                     print("He spurred on his horse to flee as fast as possible, but he wasn’t fast enough. ")
 
@@ -110,16 +120,20 @@ def chapter4(items):
 
                         if decision == "A":
                             print("It was a hard choice but he had to drop the milk to go faster. But he still wasn’t fast enough so he also had to leave the chickens to distract the spider. With the spider distracted Norr was able to flee without a problem.")
-                            items.remove("milk")
-                            items.remove("chickens")
+                            if "milk" in items:
+                                items.remove("milk")
+                            if "chickens" in items:
+                                items.remove("chickens")
                             break
                         elif decision == "B":
                             print("It was a hard choice but he had to drop his own food to distract the spider. He couldn’t afford to lose any the mortgage items. With the spider distracted Norr was able to flee without a problem.")
-                            items.remove("golden egg")
+                            if "food" in items:
+                                items.remove("food")
                             break
                         elif decision == "C":
                             print("It was a hard choice but he had to drop the golden egg to go faster. While Norr lost the egg he was fast enough to escape the spider.")
-                            items.remove("golden egg")
+                            if "golden egg" in items:
+                                items.remove("golden egg")
                             break
                         else:
                             print("invalid input")
@@ -134,4 +148,3 @@ def chapter4(items):
             print()
             input("press a button to contiue...")
         return True
-

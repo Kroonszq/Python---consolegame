@@ -94,9 +94,13 @@ while playing:
             break
 
 
+print()
 if chapter >= 9:
-    print("CONGRATSTSSSSS YOU HAVE WON THE GAME")
+    print("CONGRATS YOU HAVE WON THE GAME")
 else:
     print("Dipshit play better next time you are worthless.")
+print()
 
 input("Press enter to close the game")
+
+exit()

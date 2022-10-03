@@ -8,19 +8,21 @@ def intro():
 
     # player desicion
     playsound("", "stop")                                         #stop song
-    os.system("cls")                                              #clear cls
     while True:
         ready = input("\033[91m\033[1mARE YOU READY TO START THIS ADVENTURE? (YES / NO): \033[0m").upper()
         
         if ready == "NO":
             print("Not ready? No problem come back next time")
 
-            print("Press enter to ...")
+            input("Press enter to close the game ...")
             exit()
-            return False
+
         elif ready == "YES":
+            input("Press enter to continue ...")
             return True
         else:
             print("invalid input")
+
+       
         
 

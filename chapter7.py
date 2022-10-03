@@ -70,16 +70,19 @@ def chapter7(items):
             # OPTION B - gplden egg/magic apple
             if awnser == "C":
                 if extraOption1:
-                    print("Norr gives the golden egg to the badints to buy them off the bandits accept and let him trough")
-                    items.remove("golden egg")
+                    print("Norr gives the golden egg to the bandits to buy the bandits off. After inspecting the golden egg they lett Norr trough to continue")
+                    if "golden egg" in items:
+                        items.remove("golden egg")
                 else:
                     print("The magic apple drops from Norr his pocket and out of nowhere out of the magic apple spawns a giant tree and norr and his horse are liftid up")
-                    items.remove("apple")
+                    if "apple" in items:
+                        items.remove("apple")
                 break
             # OPTION C - golden magic apple
             elif awnser == "D" and extraOption2:
                 print("The magic apple drops from Norr his pocket and out of nowhere out of the magic apple spawns a giant tree and norr and his horse are liftid up")
-                items.remove("apple")
+                if "apple" in items:
+                    items.remove("apple")
                 break
 
         print("Invalid input")

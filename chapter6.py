@@ -4,8 +4,10 @@ def chapter6(items:list):
     sleepingtxt = open("text/chapter6/chapter6.txt", "r", encoding="utf-8")         #load chapter txt (primary)         
     #playsound("sound/naturesound.wav", "start")                                 #play song
     print("\033[35m\033[1mCHAPTER 6 - The temple\033[0m")                #display chapter
-    printTxt(sleepingtxt, "import")    
-
+    printTxt(sleepingtxt, "import")   
+     
+    print("I have 3 riddles for you!")
+    print()
     # ridle 1
     while True:
         options = [  

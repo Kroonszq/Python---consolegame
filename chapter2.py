@@ -11,66 +11,59 @@ def chapter2(items:list):
 
     completedInn = False                                                       
     while True:   
-
-
-        options = ["Pickup the package from the neighbors"]
+        
+        extraOption1 = ""
         if not completedInn:
-            options.append("Get a drink at the local inn")
+            extraOption1= "Get a drink at the local inn"
 
-        decision = inputfield("Enter youre choice ", options, items)
+        decision = inputfield("Enter youre choice ", ["Pickup the package from the neighbors", extraOption1], items)
         os.system('cls')  
 
-
         # OPTION - Pickup the package from the neighbors
-        if decision.upper().strip() == "A": 
+        if decision == "A": 
             items.append("package")                                        
             printTxt(neighbortxt, "import")                                    
             printTxt("\033[93m\033[1macquired package\033[0m")                
             input("Press enter to continue")                                   
             return True
-
-
         # OPTION - "Get a drink at the local inn
-        elif decision.upper().strip() == "B":
+        elif decision == "B":
             printTxt(inntxt, "import")
-            options = [
-                "Play a game with the man",
-                "Get yourslef a drink and leave",
-            ]
-            decision2 = inputfield("Enter youre choice ", options, items)
             os.system('cls')       
 
-
-            # OPTION - Play a game with the man
-            if decision2 == "A":                                                
-                printTxt("Alright, the game we will play is hangman, i will chose a word and you have to guess it")
-                while True:
-                    result = hangmanPuzzle()                                            
-                    # RESULT - LOST
-                    if not result:                                              
-                        print("Unfortunately you lost") 
-                        again = inputfield("Care to try again?", ["yes", "no"], items)
-                        # OPTION - NO
-                        if again == "B":                                        
-                            printTxt("Ha! you lost sad for you")
-                            break 
-                    # RESULT - WIN
-                    else:                                                      
-                        print(f"{result}")
-                        items.append("knife")
-                        printTxt("\033[93m\033[1macquired knife\033[0m")
-                        printTxt("You did wel boy, the men handed over his knife")
-                        break
-                printTxt("Norr drinks the last little bit of water. Thank the man for the game and leave the inn heading towards the ")
-                input("Press enter to continue")
-
-                
-            # OPTION - Get yourslef a drink and leave
-            else:
-                print("Drink and leave")
+            while True:
+                decision2 = inputfield("Enter youre choice ", ["Play a game with the man", "Get yourslef a drink and leave"], items)
+                # OPTION A - Play a game with the man
+                if decision2 == "A":                                                
+                    printTxt("Alright, the game we will play is hangman, i will chose a word and you have to guess it")
+                    while True:
+                        result = hangmanPuzzle()                                            
+                        # RESULT - LOST
+                        if not result:                                              
+                            print("Unfortunately you lost") 
+                            again = inputfield("Care to try again?", ["yes", "no"], items)
+                            # OPTION - NO
+                            if again == "B":                                        
+                                printTxt("Ha! you lost sad for you")
+                                break 
+                        # RESULT - WIN
+                        else:                                                      
+                            print(f"{result}")
+                            items.append("knife")
+                            printTxt("\033[93m\033[1macquired knife\033[0m")
+                            printTxt("You did wel boy, the men handed over his knife")
+                            break
+                    printTxt("Norr drinks the last little bit of water. Thank the man for the game and leave the inn heading towards the neighbor")
+                    input("Press enter to continue")
+                    break
+                # OPTION B - Get yourslef a drink and leave
+                elif decision2 == "B":
+                    print("Drink and leave")
+                    input("Press enter to continue")
+                    break
+                else:
+                    print("Invalid input")
             completedInn = True
-
-
         else:
             print("Invalid input")
 
